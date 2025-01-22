@@ -79,12 +79,24 @@ main {
     max-width: 100%; 
     max-height: 200px; 
     object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.grid-item:hover img {
+    transform: scale(1.2);
 }
 
 .grid-item p {
     margin-top: auto;
     font-size: 14px;
     text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.grid-item:hover p{
+    color:#FFC107;
+    transform: scale(1.2);
 }
 
 footer {
@@ -160,5 +172,6 @@ footer {
 footer a:hover {
     text-decoration: underline;
     color: #FFC107;
+    cursor: pointer; 
 }
 

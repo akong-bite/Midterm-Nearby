@@ -32,7 +32,7 @@ header {
     text-decoration: none;
     color: inherit; 
     cursor: pointer; 
-    display: inline-block;
+
 }
 
 .header-link:visited,
@@ -156,4 +156,5 @@ footer a {
 footer a:hover {
     text-decoration: underline;
     color: #FFC107;
+    cursor: pointer; 
 }
