@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
 body {
   font-family: 'Inter';
-  margin:0;
+  margin: 0;
   padding: 0;
   background-color: #f8f8f8;
   color: #111;
@@ -13,48 +14,50 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; 
-    justify-content: space-between; 
+    flex-grow: 1;
+    justify-content: space-between;
     padding: 40px 45px;
 }
 
 header {
     text-align: left;
-    max-width: 450px; 
+    max-width: 450px;
     font-size: 14px;
     font-weight: 400;
-    text-decoration: none; 
-    color:  #111;
-    cursor: pointer; 
+    text-decoration: none;
+    color: #111;
+    cursor: pointer;
 }
-
 
 .header-link {
     text-decoration: none;
-    color: inherit; 
-    cursor: pointer; 
+    color: inherit;
+    cursor: pointer;
     display: inline-block;
 }
 
 .header-link:visited,
-.header-link:active,
+.header-link:active {
+    text-decoration: none;
+    color: inherit;
+}
 
 strong {
     font-weight: 700;
 }
 
-
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1; 
+    flex-grow: 1;
 }
+
 
 .grid-container {
     display: flex;
     justify-content: center;
-    align-items: flex-end; 
+    align-items: flex-end;
     gap: 150px;
     text-align: center;
 }
@@ -64,24 +67,23 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; 
-    width: 250px; 
-    height: 300px; 
+    justify-content: space-between;
+    width: 250px;
+    height: 300px;
 }
 
 .grid-item-link {
-    text-decoration: none; 
+    text-decoration: none;
     color: inherit;
-    display: inline-block; 
+    display: inline-block;
 }
 
 .grid-item img {
-    max-width: 100%; 
-    max-height: 200px; 
+    max-width: 100%;
+    max-height: 200px;
     object-fit: contain;
     transition: transform 0.2s ease-in-out;
 }
-
 
 .grid-item:hover img {
     transform: scale(1.2);
@@ -94,10 +96,11 @@ main {
     transition: transform 0.2s ease-in-out;
 }
 
-.grid-item:hover p{
-    color:#FFC107;
+.grid-item:hover p {
+    color: #FFC107;
     transform: scale(1.2);
 }
+
 
 footer {
     display: flex;
@@ -116,12 +119,13 @@ footer a:hover {
     text-decoration: underline;
 }
 
+
 .overlay {
     position: fixed;
-    width: 18%; 
-    height: 100vh; 
-    left: 0; 
-    right: auto; 
+    width: 18%;
+    height: 100vh;
+    left: 0;
+    right: auto;
     top: 0;
     background: rgba(255, 230, 0, 0.9);
     color: black;
@@ -151,27 +155,73 @@ footer a:hover {
 
 .overlay-content {
     position: relative;
-    max-width: 90%; 
+    max-width: 90%;
     margin-left: 5px;
     font-size: 14px;
-    z-index: 1; 
+    z-index: 1;
 }
 
 .overlay-header-link {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
     font-weight: bold;
 }
 
-
 footer {
     position: relative;
-    z-index: 1; 
+    z-index: 1;
 }
 
 footer a:hover {
     text-decoration: underline;
     color: #FFC107;
-    cursor: pointer; 
+    cursor: pointer;
+}
+
+
+@media (max-width: 1042px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    
+    .grid-container {
+        flex-direction: column;
+        gap: 50px; 
+        align-items: center;
+    }
+
+   
+    .grid-item {
+        width: 200px;
+        height: auto;
+    }
+
+    .grid-item img {
+        max-height: 150px;
+    }
+
+    .grid-item p {
+        font-size: 12px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header {
+        max-width: 100%;
+        font-size: 12px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .overlay {
+        width: 80%;
+        padding: 20px;
+    }
 }
 
